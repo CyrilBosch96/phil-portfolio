@@ -11,7 +11,6 @@ const Navbar = () => {
           <a href="#hero">Philip Clements Samuelraj</a>
         </div>
         <div className="nav-links">
-          <a href="#hero">Home</a>
           <a href="#about">About</a>
           <a href="#techjays-overview">Techjays Overview</a>
           <a href="#investment-portfolio">Investment Portfolio</a>
@@ -33,4 +32,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
