@@ -1,4 +1,3 @@
-
 'use client';
 
 import React from 'react';
@@ -9,7 +8,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="nav-container">
         <div className="nav-brand">
-          Philip Clements Samuelraj
+          <a href="#hero">Philip Clements Samuelraj</a>
         </div>
         <div className="nav-links">
           <a href="#hero">Home</a>
