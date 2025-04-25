@@ -9,7 +9,6 @@ export default function TechjaysOverviewPage() {
   return (
     <>
       <Navbar />
-      <TechjaysOverview />
        <Image
           src={AroundImage}
           alt="Techjays Overview"
@@ -21,6 +20,7 @@ export default function TechjaysOverviewPage() {
           }}
           className="rounded-md object-cover"
         />
+       <TechjaysOverview />
     </>
   );
 }
