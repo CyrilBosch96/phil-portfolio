@@ -11,7 +11,7 @@ const Hero = () => {
           alt="Philip Clements Samuelraj"
           width={800} // Increased width
           height={600} // Adjusted height for rectangular shape
-          className="rounded-md" // Changed to rounded-md for less rounding
+          className="rounded-md object-contain" // Changed to rounded-md for less rounding and object-contain
         />
         <h1 className="font-serif text-5xl font-bold mb-4">
           Philip Clements Samuelraj
