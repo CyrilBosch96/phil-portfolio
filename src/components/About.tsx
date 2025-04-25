@@ -3,19 +3,19 @@ import React from 'react';
 
 const About = () => {
   return (
-    <section className="py-16 bg-gray-100">
+    <section className="py-16 light-gray-section">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-6">About Philip</h2>
+        <h2 className="text-3xl font-serif font-bold mb-6">About Philip</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
-            <p className="mb-4">
+            <p className="mb-4 dark-charcoal">
               A highly accomplished CEO, investor, and technology leader, Philip
               Clements Samuelraj has consistently demonstrated a remarkable ability
               to transform innovative ideas into thriving businesses. With a keen eye
               for identifying opportunities and a passion for driving growth, he has
               established himself as a visionary in the industry.
             </p>
-            <p className="mb-4">
+            <p className="mb-4 dark-charcoal">
               Throughout his career, Philip has been instrumental in leading numerous
               successful ventures, leveraging his expertise in technology and
               business strategy to create impactful solutions. His commitment to
