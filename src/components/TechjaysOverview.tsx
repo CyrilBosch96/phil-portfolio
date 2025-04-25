@@ -3,9 +3,12 @@ import React from 'react';
 
 const TechjaysOverview = () => {
   return (
-    <section className="py-16 bg-white">
+    <section id="techjays-overview" className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-serif font-bold mb-6">Techjays Overview</h2>
+        <p className="mb-4 dark-charcoal">
+          Techjays is dedicated to transforming innovative ideas into thriving businesses through technology and strategic leadership.
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-gray-100 rounded-lg p-6 shadow-md">
             <h3 className="text-xl font-semibold mb-2 dark-charcoal">150+ Projects</h3>
@@ -22,9 +25,17 @@ const TechjaysOverview = () => {
             </p>
           </div>
         </div>
+        {/* Company mission and vision */}
+        <div className="mt-6">
+          <h3 className="text-xl font-semibold mb-2 dark-charcoal">Mission and Vision</h3>
+          <p className="dark-charcoal">
+            Techjays is committed to innovation and excellence, driving growth and creating impactful solutions.
+          </p>
+        </div>
       </div>
     </section>
   );
 };
 
 export default TechjaysOverview;
+

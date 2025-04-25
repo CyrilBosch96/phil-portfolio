@@ -1,20 +1,24 @@
 
+'use client';
+
 import React from 'react';
-import { Linkedin, Twitter } from 'lucide-react';
+import {Linkedin, Twitter} from 'lucide-react';
 
 const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="nav-container">
         <div className="nav-brand">
-          Monica Shokrai
+          Philip Clements Samuelraj
         </div>
         <div className="nav-links">
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Work</a>
-          <a href="#">Hobbies</a>
-          <a href="#">Contact</a>
+          <a href="#hero">Home</a>
+          <a href="#about">About</a>
+          <a href="#techjays-overview">Techjays Overview</a>
+          <a href="#investment-portfolio">Investment Portfolio</a>
+          <a href="#media">Media</a>
+          <a href="#hobbies">Hobbies</a>
+          <a href="#contact">Contact</a>
         </div>
         <div className="social-links">
           <a href="#" aria-label="LinkedIn">
@@ -30,3 +34,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
