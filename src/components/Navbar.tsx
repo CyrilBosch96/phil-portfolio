@@ -11,7 +11,6 @@ const Navbar = () => {
           <a href="#hero">Philip Clements Samuelraj</a>
         </div>
         <div className="nav-links">
-          <a href="#about">About</a>
           <a href="#techjays-overview">Techjays Overview</a>
           <a href="#investment-portfolio">Investment Portfolio</a>
           <a href="#media">Media</a>
