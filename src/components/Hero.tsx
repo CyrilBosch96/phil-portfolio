@@ -9,9 +9,9 @@ const Hero = () => {
         <Image
           src={philImage}
           alt="Philip Clements Samuelraj"
-          width={500}
-          height={500}
-          className="rounded-full"
+          width={800} // Increased width
+          height={600} // Adjusted height for rectangular shape
+          className="rounded-md" // Changed to rounded-md for less rounding
         />
         <h1 className="font-serif text-5xl font-bold mb-4">
           Philip Clements Samuelraj
