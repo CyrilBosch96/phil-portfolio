@@ -32,13 +32,23 @@ const TechjaysOverview = () => {
         {/* Company mission and vision */}
         <div className="mt-6">
           <h3 className="text-xl font-semibold mb-2 dark-charcoal">Techjays Overview</h3>
-          <p className="dark-charcoal">
-            Techjays Overview Founded in 2020 in Menlo Park, California, Techjays is on a bold mission to build the world's best AI products, apps, and solutions. With over 150 projects delivered across 7 countries, they've rapidly grown to serve 65+ clients spanning 15+ verticals in just a few years. Their team of 170+ professionals specializes in Gen AI, Web & Mobile development, Edge/Cloud Computing, AI Quality Engineering, and Digital Transformation. This expertise is backed by partnerships with industry leaders like Google Cloud, AWS, and IBM, along with ISO 27001 and 9001 certifications. At Techjays, they combine cutting-edge technical capabilities with deep industry knowledge to deliver solutions that drive real business impact. Their client-centric approach and commitment to excellence have established them as trusted partners for organizations looking to harness the power of AI and digital technologies in an increasingly competitive landscape.
+          <p className="dark-charcoal mb-4">
+            Founded in 2020 in Menlo Park, California, Techjays is on a bold mission to build the world's best AI products, apps, and solutions.
+             With over 150 projects delivered across 7 countries, they've rapidly grown to serve 65+ clients spanning 15+ verticals in just a few years.
           </p>
-        </div>
-      </div>
-    </section>
-  );
-};
+          <p className="dark-charcoal mb-4">
+            Their team of 170+ professionals specializes in Gen AI, Web & Mobile development, Edge/Cloud Computing, AI Quality Engineering, and Digital Transformation.
+             This expertise is backed by partnerships with industry leaders like Google Cloud, AWS, and IBM, along with ISO 27001 and 9001 certifications.
+           </p>
+           <p className="dark-charcoal">
+             At Techjays, they combine cutting-edge technical capabilities with deep industry knowledge to deliver solutions that drive real business impact.
+              Their client-centric approach and commitment to excellence have established them as trusted partners for organizations looking to harness the power of AI and digital technologies in an increasingly competitive landscape.
+           </p>
+         </div>
+       </div>
+     </section>
+   );
+ };
 
-export default TechjaysOverview;
+ export default TechjaysOverview;
+
