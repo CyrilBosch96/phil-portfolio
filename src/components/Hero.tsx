@@ -9,9 +9,13 @@ const Hero = () => {
         <Image
           src={philImage}
           alt="Philip Clements Samuelraj"
-          width={800} // Increased width
-          height={600} // Adjusted height for rectangular shape
-          className="rounded-md object-contain" // Changed to rounded-md for less rounding and object-contain
+          width={1200}
+          height={800}
+          style={{
+            maxWidth: '100%',
+            height: 'auto',
+          }}
+          className="rounded-md object-cover"
         />
         <h1 className="font-serif text-5xl font-bold mb-4">
           Philip Clements Samuelraj
