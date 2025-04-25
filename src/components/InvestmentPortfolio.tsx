@@ -32,19 +32,12 @@ const InvestmentPortfolio = () => {
             {/* Add subtle hover effects revealing additional information */}
           </div>
         </div>
-        {/* Add visual representation of investment sectors here */}
-        <div className="mt-6">
-          <p className="text-xl font-semibold dark-charcoal">Investment Sectors Visualization</p>
-          {/* Implement interactive elements showing investment philosophy */}
-          <div className="h-48 bg-gray-200 rounded-lg mt-2">
-            {/* Add interactive elements or chart here */}
-            <p className="text-center py-20 dark-charcoal">Interactive Visualization</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default InvestmentPortfolio;
+       
+       </div>
+     </section>
+   );
+ };
+ 
+ export default InvestmentPortfolio;
+ 
 
