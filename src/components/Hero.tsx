@@ -6,11 +6,10 @@ const Hero = () => {
     <section className="min-h-screen flex items-center justify-center bg-background">
       <div className="text-center">
         <h1 className="font-serif text-5xl font-bold mb-4">
-          Philip Clements Samuelraj
+          Monica Shokrai
         </h1>
         <p className="text-xl dark-charcoal">
-          CEO &amp; visionary leader with a passion for transforming ideas into
-          impactful businesses
+         UX/UI Designer
         </p>
       </div>
     </section>
