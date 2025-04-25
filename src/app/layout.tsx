@@ -16,9 +16,9 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: 'Monica Shokrai - Portfolio',
+  title: 'Philip Clements Samuelraj - Portfolio',
   description:
-    'Portfolio website showcasing the accomplishments of Monica Shokrai.',
+    'Portfolio website showcasing the accomplishments of Philip Clements Samuelraj.',
   metadataBase: new URL('https://yourdomain.com'), // Replace with your actual domain
   openGraph: {
     images: '/images/profile.jpg', // Replace with a relevant image
@@ -44,3 +44,4 @@ export default function RootLayout({
     </html>
   );
 }
+

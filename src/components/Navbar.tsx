@@ -2,20 +2,21 @@
 
 import React from 'react';
 import {Linkedin, Twitter} from 'lucide-react';
+import Link from 'next/link';
 
 const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="nav-container">
         <div className="nav-brand">
-          <a href="#hero">Philip Clements Samuelraj</a>
+          <Link href="/">Philip Clements Samuelraj</Link>
         </div>
         <div className="nav-links">
-          <a href="#techjays-overview">Techjays Overview</a>
-          <a href="#investment-portfolio">Investment Portfolio</a>
-          <a href="#media">Media</a>
-          <a href="#hobbies">Hobbies</a>
-          <a href="#contact">Contact</a>
+          <Link href="/techjays-overview">Techjays Overview</Link>
+          <Link href="/investment-portfolio">Investment Portfolio</Link>
+          <Link href="/media">Media</Link>
+          <Link href="/hobbies">Hobbies</Link>
+          <Link href="/contact">Contact</Link>
         </div>
         <div className="social-links">
           <a href="#" aria-label="LinkedIn">
