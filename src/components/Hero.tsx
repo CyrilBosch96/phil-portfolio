@@ -17,12 +17,6 @@ const Hero = () => {
           }}
           className="rounded-md object-cover"
         />
-        <h1 className="font-serif text-5xl font-bold mb-4">
-          Philip Clements Samuelraj
-        </h1>
-        <p className="text-xl dark-charcoal">
-          CEO & visionary leader with a passion for transforming ideas into impactful businesses
-        </p>
         {/* Add subtle background animation or gradient here */}
       </div>
     </section>
