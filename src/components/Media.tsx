@@ -51,7 +51,7 @@ const Media = () => {
       label: 'Interview', // New card with Interview label
       image: interviewImage, // Added interview image
       alt: 'Techjays Interview Image', // Added alt text for interview image
-      // No link provided for this one
+      link: '#', // Added placeholder link for the interview
     },
   ];
 
@@ -80,7 +80,7 @@ const Media = () => {
               {/* Content Container */}
               <CardHeader className="p-6 flex-grow"> {/* Use padding and make it grow */}
                 <CardTitle className="text-xl font-semibold mb-2 text-foreground leading-snug"> {/* Adjusted leading */}
-                  {article.title} {/* Removed the link wrapper */}
+                   {article.title} {/* Removed the link wrapper */}
                 </CardTitle>
                  {article.description && (
                    <CardDescription className="text-muted-foreground">
@@ -88,7 +88,7 @@ const Media = () => {
                    </CardDescription>
                  )}
               </CardHeader>
-              {/* Footer with Read More link */}
+              {/* Footer with Read More/Watch Now link */}
               {article.link && (
                 <CardFooter className="p-6 pt-0 mt-auto"> {/* Added pt-0 and mt-auto */}
                   <a
@@ -97,7 +97,7 @@ const Media = () => {
                     rel="noopener noreferrer"
                     className="text-primary hover:underline transition-colors duration-200 font-medium"
                   >
-                    Read More...
+                    {article.label === 'Interview' ? 'Watch Now...' : 'Read More...'}
                   </a>
                 </CardFooter>
               )}
