@@ -2,6 +2,7 @@
 import React from 'react';
 import Image from 'next/image'; // Import the Image component
 import { Card, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'; // Import CardFooter and CardDescription
+import { Badge } from '@/components/ui/badge'; // Import Badge component
 
 // Import the images
 import digitalDigestImage from '@/app/Digital Digest.png';
@@ -50,7 +51,7 @@ const Media = () => {
         {/* Changed from grid to flex column layout */}
         <div className="flex flex-col items-center gap-10">
           {articles.map((article, index) => (
-            <Card key={index} className="w-full max-w-3xl overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col group border border-border"> {/* Changed max-w-2xl to max-w-3xl */}
+            <Card key={index} className="relative w-full max-w-3xl overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col group border border-border"> {/* Changed max-w-2xl to max-w-3xl */}
               {/* Image Container */}
               {article.image && (
                 <div className="relative w-full h-60 overflow-hidden border-b border-border rounded-t-lg"> {/* Added border-b */}
@@ -87,6 +88,10 @@ const Media = () => {
                   </a>
                 </CardFooter>
               )}
+              {/* Article Badge */}
+              <Badge variant="secondary" className="absolute bottom-4 right-4">
+                Article
+              </Badge>
             </Card>
           ))}
         </div>
