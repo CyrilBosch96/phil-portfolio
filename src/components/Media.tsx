@@ -1,24 +1,36 @@
 
 import React from 'react';
-import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'; // Assuming you have Card components
+import Image from 'next/image'; // Import the Image component
+import { Card, CardHeader, CardTitle } from '@/components/ui/card';
+
+// Import the image
+import digitalDigestImage from '@/app/Digital Digest.png';
 
 const Media = () => {
   const articles = [
     {
       title: 'Digital Digest: Boldly Building with AI',
       link: 'https://digitaldigest.com/techjays-ai-future-philip-clements-samuelraj/',
+      image: digitalDigestImage, // Add image reference
+      alt: 'Digital Digest Article', // Add alt text
     },
     {
       title: 'Bold Journey: Meet Philip Samuelraj',
       link: 'https://boldjourney.com/meet-philip-samuelraj/',
+      // image: boldJourneyImage, // Add image reference if available
+      // alt: 'Bold Journey Article', // Add alt text
     },
     {
       title: 'Medium: Empowering People and Innovating Software Services',
       link: 'https://medium.com/strtupboost/philip-samuelrajs-vision-empowering-people-and-innovating-software-services-593cab150352',
+      // image: mediumImage, // Add image reference if available
+      // alt: 'Medium Article', // Add alt text
     },
     {
       title: 'TopFirms: Interview With The Founder & Chief helper of Techjays – Philip Samuelraj',
-      // link: '#', // Add link if available
+      link: null, // No link provided
+      // image: topFirmsImage, // Add image reference if available
+      // alt: 'TopFirms Interview', // Add alt text
     },
   ];
 
@@ -30,6 +42,16 @@ const Media = () => {
           {articles.map((article, index) => (
             <Card key={index} className="bg-gray-100 shadow-md hover:shadow-lg transition-shadow duration-300">
               <CardHeader>
+                {/* Conditionally render the image if it exists */}
+                {article.image && (
+                  <Image
+                    src={article.image}
+                    alt={article.alt || article.title} // Use provided alt text or title
+                    width={400} // Example width
+                    height={200} // Example height
+                    className="mb-4 rounded-md object-cover"
+                  />
+                )}
                 <CardTitle className="text-xl font-semibold mb-2 dark-charcoal">
                   {article.link ? (
                     <a href={article.link} target="_blank" rel="noopener noreferrer" className="hover:underline">
@@ -39,14 +61,6 @@ const Media = () => {
                     article.title
                   )}
                 </CardTitle>
-                {/* Optional: Add description or link preview if needed */}
-                {/* <CardDescription>
-                  {article.link && (
-                    <a href={article.link} target="_blank" rel="noopener noreferrer" className="teal-accent hover:underline">
-                      Read More
-                    </a>
-                  )}
-                </CardDescription> */}
               </CardHeader>
             </Card>
           ))}
