@@ -21,8 +21,8 @@ const Hero = () => {
         priority
       />
 
-      {/* Foreground Image */}
-      <div className="absolute inset-0 flex items-center justify-center z-10"> {/* Container for foreground image */}
+      {/* Foreground Image Container - Changed items-center to items-end */}
+      <div className="absolute inset-0 flex items-end justify-center z-10"> {/* Container for foreground image, aligned to bottom */}
         <Image
           src={philImage}
           alt="Philip Clements Samuelraj"
