@@ -15,7 +15,7 @@ const Hero = () => {
         src={bannerImage}
         alt="Hero Banner Background"
         layout="fill"
-        objectFit="cover"
+        objectFit="cover" // Changed from contain to cover
         objectPosition="center"
         className="absolute inset-0 z-0" // Ensure it's the background
         priority
@@ -26,8 +26,8 @@ const Hero = () => {
         <Image
           src={philImage}
           alt="Philip Clements Samuelraj"
-          width={845} // Increased width by 30% (650 * 1.3)
-          height={845} // Increased height by 30% (650 * 1.3)
+          width={592} // Reduced width by 30% (845 * 0.7)
+          height={592} // Reduced height by 30% (845 * 0.7)
           className="object-contain" // Use contain to show the full image without cropping
           priority
         />
