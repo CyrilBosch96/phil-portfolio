@@ -10,15 +10,15 @@ const Media = () => {
     },
     {
       title: 'Bold Journey: Meet Philip Samuelraj',
-      link: 'https://boldjourney.com/meet-philip-samuelraj/', // Add link if available
+      link: 'https://boldjourney.com/meet-philip-samuelraj/',
     },
     {
       title: 'Medium: Empowering People and Innovating Software Services',
-      // link: '#',
+      link: 'https://medium.com/strtupboost/philip-samuelrajs-vision-empowering-people-and-innovating-software-services-593cab150352',
     },
     {
       title: 'TopFirms: Interview With The Founder & Chief helper of Techjays – Philip Samuelraj',
-      // link: '#',
+      // link: '#', // Add link if available
     },
   ];
 
