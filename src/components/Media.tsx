@@ -23,6 +23,7 @@ const Media = () => {
       link: 'https://boldjourney.com/meet-philip-samuelraj/',
       image: boldJourneyImage,
       alt: 'Bold Journey Article Cover',
+      description: 'Meet Philip Samuelraj', // Added description
     },
     {
       title: 'Medium: Empowering People and Innovating Software Services',
@@ -93,3 +94,4 @@ const Media = () => {
 };
 
 export default Media;
+
