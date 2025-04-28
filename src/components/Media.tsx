@@ -45,10 +45,10 @@ const Media = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10"> {/* Increased gap */}
           {articles.map((article, index) => (
-            <Card key={index} className="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+            <Card key={index} className="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col group"> {/* Added group class */}
               {/* Image Container */}
               {article.image && (
-                <div className="relative w-full h-60 overflow-hidden"> {/* Fixed height container */}
+                <div className="relative w-full h-60 overflow-hidden border border-border rounded-t-lg"> {/* Added border and rounded-t-lg */}
                   <Image
                     src={article.image}
                     alt={article.alt || article.title}
