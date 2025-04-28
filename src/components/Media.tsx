@@ -10,7 +10,7 @@ const Media = () => {
     },
     {
       title: 'Bold Journey: Meet Philip Samuelraj',
-      // link: '#', // Add link if available
+      link: 'https://boldjourney.com/meet-philip-samuelraj/', // Add link if available
     },
     {
       title: 'Medium: Empowering People and Innovating Software Services',
@@ -51,7 +51,6 @@ const Media = () => {
             </Card>
           ))}
         </div>
-        {/* Removed podcast section as per previous instructions */}
       </div>
     </section>
   );
