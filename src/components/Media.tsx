@@ -9,6 +9,7 @@ import digitalDigestImage from '@/app/Digital Digest.png';
 import boldJourneyImage from '@/app/Bold Journey.png'; // Import Bold Journey image
 import mediumImage from '@/app/Medium.png'; // Import Medium image
 import topFirmImage from '@/app/TopFirm.png'; // Import TopFirm image
+import interviewImage from '@/app/Interview.jpg'; // Import Interview image
 
 const Media = () => {
   const articles = [
@@ -48,7 +49,9 @@ const Media = () => {
       title: 'What Makes Techjays AI Products STAND OUT?',
       description: 'The Future of AI Development: Insights from Philip, Founder of Techjays',
       label: 'Interview', // New card with Interview label
-      // No link or image provided for this one
+      image: interviewImage, // Added interview image
+      alt: 'Techjays Interview Image', // Added alt text for interview image
+      // No link provided for this one
     },
   ];
 
