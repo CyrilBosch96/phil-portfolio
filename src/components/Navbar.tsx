@@ -10,7 +10,7 @@
         <div className="nav-brand">
            {/* Link the brand name to the homepage */}
            {/* Increased font size and changed font */}
-           <Link href="/" className="text-foreground font-serif text-xl font-semibold">
+           <Link href="/" className="text-foreground font-serif text-2xl font-semibold">
              Philip Clements Samuelraj
            </Link>
         </div>
