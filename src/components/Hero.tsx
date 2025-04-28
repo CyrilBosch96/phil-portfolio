@@ -26,8 +26,8 @@ const Hero = () => {
         <Image
           src={philImage}
           alt="Philip Clements Samuelraj"
-          width={650} // Increased width by 30% (500 * 1.3)
-          height={650} // Increased height by 30% (500 * 1.3)
+          width={845} // Increased width by 30% (650 * 1.3)
+          height={845} // Increased height by 30% (650 * 1.3)
           className="object-contain" // Use contain to show the full image without cropping
           priority
         />
