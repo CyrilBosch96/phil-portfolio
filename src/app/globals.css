@@ -6,7 +6,15 @@
 @layer base {
   html, body {
     @apply h-full; /* Ensure html and body take full height */
+    /* Default overflow allows scrolling */
+    overflow-y: auto;
   }
+
+  /* Disable scroll specifically for the home page */
+  body:has(#home-page-wrapper) {
+    overflow: hidden;
+  }
+
 
   body {
     font-family: 'Poppins', sans-serif;
@@ -167,10 +175,11 @@
   color: hsl(var(--primary)); /* Use primary color for hover */
 }
 
-/* Add scrollbar styles for all pages except the home page */
-html:not(body > #__next > div:first-child) {
+/* REMOVED: Complex :not rule for scrollbars */
+/* html:not(body > #__next > div:first-child) {
   overflow-y: auto;
-}
+} */
+
 /* Add scrollbar styles */
 ::-webkit-scrollbar {
   width: 8px; /* Width of the scrollbar */
