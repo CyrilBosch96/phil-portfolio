@@ -1,3 +1,4 @@
+
 'use client';
 
 import TechjaysOverview from '@/components/TechjaysOverview';
@@ -9,19 +10,17 @@ export default function TechjaysOverviewPage() {
   return (
     <>
       <Navbar />
-       <Image
-          src={AroundImage}
-          alt="Techjays Overview"
-          width={1200}
-          height={800}
-          style={{
-            maxWidth: '100%',
-            height: 'auto',
-          }}
-          className="rounded-md object-cover"
-        />
+       <div className="flex justify-center my-8"> {/* Added container to center the image */}
+         <Image
+            src={AroundImage}
+            alt="Techjays Overview"
+            width={960} // Reduced width by 20% (1200 * 0.8)
+            height={640} // Reduced height by 20% (800 * 0.8)
+            // Removed inline style for max-width to allow centering
+            className="rounded-md object-cover" // Removed mx-auto as the parent div handles centering
+          />
+       </div>
        <TechjaysOverview />
     </>
   );
 }
-
