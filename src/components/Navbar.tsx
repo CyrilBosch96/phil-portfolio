@@ -1,7 +1,7 @@
 'use client';
 
  import React from 'react';
- import {Linkedin, Twitter, Instagram} from 'lucide-react'; // Import Instagram icon
+ import {Linkedin, Twitter, Instagram} from 'lucide-react'; // Keep imports for now if needed elsewhere, but remove links
  import Link from 'next/link';
 
  const Navbar = () => {
@@ -9,21 +9,17 @@
     <nav className="navbar sticky top-0 bg-background z-10">
       <div className="nav-container">
         <div className="nav-brand">
-           <Link href="/" className="text-black font-semibold">Philip Clements Samuelraj</Link>
+           {/* Link the brand name to the homepage */}
+           <Link href="/" className="text-foreground font-semibold">Philip Clements Samuelraj</Link>
         </div>
         <div className="nav-links">
-           <Link href="/techjays-overview" className="text-black">Techjays Overview</Link>
-           <Link href="/investment-portfolio" className="text-black">Investment Portfolio</Link>
-           <Link href="/media" className="text-black">Media Mentions</Link>
-           <Link href="/hobbies" className="text-black">Hobbies</Link>
-           <Link href="/contact" className="text-black">Contact</Link>
+           <Link href="/techjays-overview" className="text-foreground">Techjays Overview</Link>
+           <Link href="/investment-portfolio" className="text-foreground">Investment Portfolio</Link>
+           <Link href="/media" className="text-foreground">Media Mentions</Link>
+           <Link href="/hobbies" className="text-foreground">Hobbies</Link>
+           <Link href="/contact" className="text-foreground">Contact</Link>
         </div>
-        <div className="social-links">
-           <a href="https://www.linkedin.com/in/philipclementssamuelraj/" target="_blank" rel="noopener noreferrer" className="text-black"><Linkedin /></a>
-           <a href="https://x.com/realtechCEO" target="_blank" rel="noopener noreferrer" className="text-black"><Twitter /></a>
-           {/* Update Instagram link */}
-           <a href="https://www.instagram.com/phil.samuelraj/" target="_blank" rel="noopener noreferrer" className="text-black"><Instagram /></a>
-        </div>
+        {/* Removed social links div */}
       </div>
     </nav>
   );
