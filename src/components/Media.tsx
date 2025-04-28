@@ -43,9 +43,10 @@ const Media = () => {
         <h2 className="text-3xl font-serif font-bold mb-12 text-center text-foreground">
           Media Mentions
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10"> {/* Increased gap */}
+        {/* Changed from grid to flex column layout */}
+        <div className="flex flex-col items-center gap-10">
           {articles.map((article, index) => (
-            <Card key={index} className="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col group border border-border"> {/* Added border class */}
+            <Card key={index} className="w-full max-w-2xl overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col group border border-border"> {/* Constrained width and centered */}
               {/* Image Container */}
               {article.image && (
                 <div className="relative w-full h-60 overflow-hidden border-b border-border rounded-t-lg"> {/* Added border-b */}
@@ -54,7 +55,7 @@ const Media = () => {
                     alt={article.alt || article.title}
                     layout="fill" // Fill the container
                     objectFit="cover" // Crop the image to cover the container
-                    className="transition-transform duration-300 group-hover:scale-105" // Slight zoom on hover
+                    className="transition-transform duration-300 group-hover:scale-105 border border-border" // Added border for stroke
                   />
                 </div>
               )}
