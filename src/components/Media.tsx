@@ -50,7 +50,7 @@ const Media = () => {
         {/* Changed from grid to flex column layout */}
         <div className="flex flex-col items-center gap-10">
           {articles.map((article, index) => (
-            <Card key={index} className="w-full max-w-2xl overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col group border border-border"> {/* Constrained width and centered */}
+            <Card key={index} className="w-full max-w-3xl overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col group border border-border"> {/* Changed max-w-2xl to max-w-3xl */}
               {/* Image Container */}
               {article.image && (
                 <div className="relative w-full h-60 overflow-hidden border-b border-border rounded-t-lg"> {/* Added border-b */}
