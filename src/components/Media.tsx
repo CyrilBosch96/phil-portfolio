@@ -1,7 +1,7 @@
 
 import React from 'react';
 import Image from 'next/image'; // Import the Image component
-import { Card, CardHeader, CardTitle, CardFooter } from '@/components/ui/card'; // Import CardFooter
+import { Card, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'; // Import CardFooter and CardDescription
 
 // Import the images
 import digitalDigestImage from '@/app/Digital Digest.png';
@@ -16,6 +16,7 @@ const Media = () => {
       link: 'https://digitaldigest.com/techjays-ai-future-philip-clements-samuelraj/',
       image: digitalDigestImage,
       alt: 'Digital Digest Article Cover',
+      description: 'In Conversation: Philip Clements Samuelraj on Boldly Building with AI',
     },
     {
       title: 'Bold Journey: Meet Philip Samuelraj',
@@ -64,6 +65,11 @@ const Media = () => {
                 <CardTitle className="text-xl font-semibold mb-2 text-foreground leading-snug"> {/* Adjusted leading */}
                   {article.title} {/* Removed the link wrapper */}
                 </CardTitle>
+                 {article.description && (
+                   <CardDescription className="text-muted-foreground">
+                     {article.description}
+                   </CardDescription>
+                 )}
               </CardHeader>
               {/* Footer with Read More link */}
               {article.link && (
