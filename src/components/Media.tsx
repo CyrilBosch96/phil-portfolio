@@ -18,6 +18,7 @@ const Media = () => {
       image: digitalDigestImage,
       alt: 'Digital Digest Article Cover',
       description: 'In Conversation: Philip Clements Samuelraj on Boldly Building with AI',
+      label: 'Article',
     },
     {
       title: 'Bold Journey: Meet Philip Samuelraj',
@@ -25,6 +26,7 @@ const Media = () => {
       image: boldJourneyImage,
       alt: 'Bold Journey Article Cover',
       description: 'Meet Philip Samuelraj',
+      label: 'Article',
     },
     {
       title: 'Medium: Empowering People and Innovating Software Services',
@@ -32,13 +34,21 @@ const Media = () => {
       image: mediumImage,
       alt: 'Medium Article Cover',
       description: 'Philip Samuelraj’s Vision: Empowering People and Innovating Software Services', // Added description
+      label: 'Article',
     },
     {
       title: 'TopFirms: Interview With The Founder & Chief helper of Techjays – Philip Samuelraj',
       link: 'https://topfirms.co/interview/founder-of-techjays',
       image: topFirmImage,
       alt: 'TopFirms Interview Cover',
-      description: 'The Topfirms team had the privilege of interviewing Philip Samuelraj, the Founder of Techjays. It was a rewarding experience marked by excellent collaboration and insightful guidance on emerging trends.' // Added description for TopFirms article
+      description: 'The Topfirms team had the privilege of interviewing Philip Samuelraj, the Founder of Techjays. It was a rewarding experience marked by excellent collaboration and insightful guidance on emerging trends.', // Added description for TopFirms article
+      label: 'Article',
+    },
+    {
+      title: 'What Makes Techjays AI Products STAND OUT?',
+      description: 'The Future of AI Development: Insights from Philip, Founder of Techjays',
+      label: 'Interview', // New card with Interview label
+      // No link or image provided for this one
     },
   ];
 
@@ -88,9 +98,9 @@ const Media = () => {
                   </a>
                 </CardFooter>
               )}
-              {/* Article Badge */}
+              {/* Article/Interview Badge */}
               <Badge variant="secondary" className="absolute bottom-4 right-4">
-                Article
+                {article.label}
               </Badge>
             </Card>
           ))}
