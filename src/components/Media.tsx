@@ -1,7 +1,7 @@
 
 import React from 'react';
 import Image from 'next/image'; // Import the Image component
-import { Card, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardHeader, CardTitle, CardFooter } from '@/components/ui/card'; // Import CardFooter
 
 // Import the images
 import digitalDigestImage from '@/app/Digital Digest.png';
@@ -45,10 +45,10 @@ const Media = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10"> {/* Increased gap */}
           {articles.map((article, index) => (
-            <Card key={index} className="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col group"> {/* Added group class */}
+            <Card key={index} className="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col group border border-border"> {/* Added border class */}
               {/* Image Container */}
               {article.image && (
-                <div className="relative w-full h-60 overflow-hidden border border-border rounded-t-lg"> {/* Added border and rounded-t-lg */}
+                <div className="relative w-full h-60 overflow-hidden border-b border-border rounded-t-lg"> {/* Added border-b */}
                   <Image
                     src={article.image}
                     alt={article.alt || article.title}
@@ -61,20 +61,22 @@ const Media = () => {
               {/* Content Container */}
               <CardHeader className="p-6 flex-grow"> {/* Use padding and make it grow */}
                 <CardTitle className="text-xl font-semibold mb-2 text-foreground leading-snug"> {/* Adjusted leading */}
-                  {article.link ? (
-                    <a
-                      href={article.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-primary hover:underline transition-colors duration-200"
-                    >
-                      {article.title}
-                    </a>
-                  ) : (
-                    article.title
-                  )}
+                  {article.title} {/* Removed the link wrapper */}
                 </CardTitle>
               </CardHeader>
+              {/* Footer with Read More link */}
+              {article.link && (
+                <CardFooter className="p-6 pt-0 mt-auto"> {/* Added pt-0 and mt-auto */}
+                  <a
+                    href={article.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline transition-colors duration-200 font-medium"
+                  >
+                    Read More...
+                  </a>
+                </CardFooter>
+              )}
             </Card>
           ))}
         </div>
