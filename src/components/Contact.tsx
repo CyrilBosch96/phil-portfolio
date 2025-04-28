@@ -128,8 +128,7 @@ const Contact = () => {
           <div>
             {/* Map Placeholder */}
             <div className="h-64 bg-muted rounded-lg mb-8">
-              {/* Replace with an actual map component or image */}
-              <p className="text-center py-24 text-muted-foreground">Map location of Techjays headquarters</p>
+              {/* Placeholder for map - removed the text */}
             </div>
 
             {/* Social media links */}
