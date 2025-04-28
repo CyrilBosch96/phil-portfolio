@@ -37,6 +37,7 @@ const Media = () => {
       link: 'https://topfirms.co/interview/founder-of-techjays',
       image: topFirmImage,
       alt: 'TopFirms Interview Cover',
+      description: 'The Topfirms team had the privilege of interviewing Philip Samuelraj, the Founder of Techjays. It was a rewarding experience marked by excellent collaboration and insightful guidance on emerging trends.' // Added description for TopFirms article
     },
   ];
 
