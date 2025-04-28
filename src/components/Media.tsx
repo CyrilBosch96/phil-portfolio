@@ -6,11 +6,11 @@ const Media = () => {
   const articles = [
     {
       title: 'Digital Digest: Boldly Building with AI',
-      // link: '#', // Add link if available
+      link: 'https://digitaldigest.com/techjays-ai-future-philip-clements-samuelraj/',
     },
     {
       title: 'Bold Journey: Meet Philip Samuelraj',
-      // link: '#',
+      // link: '#', // Add link if available
     },
     {
       title: 'Medium: Empowering People and Innovating Software Services',
@@ -30,12 +30,22 @@ const Media = () => {
           {articles.map((article, index) => (
             <Card key={index} className="bg-gray-100 shadow-md hover:shadow-lg transition-shadow duration-300">
               <CardHeader>
-                <CardTitle className="text-xl font-semibold mb-2 dark-charcoal">{article.title}</CardTitle>
+                <CardTitle className="text-xl font-semibold mb-2 dark-charcoal">
+                  {article.link ? (
+                    <a href={article.link} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                      {article.title}
+                    </a>
+                  ) : (
+                    article.title
+                  )}
+                </CardTitle>
                 {/* Optional: Add description or link preview if needed */}
                 {/* <CardDescription>
-                  <a href={article.link} target="_blank" rel="noopener noreferrer" className="teal-accent hover:underline">
-                    Read More
-                  </a>
+                  {article.link && (
+                    <a href={article.link} target="_blank" rel="noopener noreferrer" className="teal-accent hover:underline">
+                      Read More
+                    </a>
+                  )}
                 </CardDescription> */}
               </CardHeader>
             </Card>
