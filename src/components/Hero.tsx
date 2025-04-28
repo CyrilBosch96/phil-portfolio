@@ -8,6 +8,7 @@ const Hero = () => {
     <section
       id="hero"
       className="h-screen w-screen relative overflow-hidden bg-background flex items-center justify-center"
+      style={{ paddingTop: 0, paddingBottom: 0 }} // Remove padding
     >
       {/* Background Image */}
       <Image
@@ -25,8 +26,8 @@ const Hero = () => {
         <Image
           src={philImage}
           alt="Philip Clements Samuelraj"
-          width={500} // Adjust width as needed
-          height={500} // Adjust height as needed
+          width={650} // Increased width by 30% (500 * 1.3)
+          height={650} // Increased height by 30% (500 * 1.3)
           className="object-contain" // Use contain to show the full image without cropping
           priority
         />
