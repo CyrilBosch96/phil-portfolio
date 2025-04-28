@@ -1,7 +1,7 @@
 'use client';
 
  import React from 'react';
- import {Linkedin, Twitter} from 'lucide-react';
+ import {Linkedin, Twitter, Instagram} from 'lucide-react'; // Import Instagram icon
  import Link from 'next/link';
 
  const Navbar = () => {
@@ -21,6 +21,8 @@
         <div className="social-links">
            <a href="https://www.linkedin.com/in/philipclementssamuelraj/" target="_blank" rel="noopener noreferrer" className="text-black"><Linkedin /></a>
            <a href="https://x.com/realtechCEO" target="_blank" rel="noopener noreferrer" className="text-black"><Twitter /></a>
+           {/* Add Instagram link and icon */}
+           <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="text-black"><Instagram /></a>
         </div>
       </div>
     </nav>
