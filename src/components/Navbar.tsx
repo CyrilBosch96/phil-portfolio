@@ -21,8 +21,8 @@
         <div className="social-links">
            <a href="https://www.linkedin.com/in/philipclementssamuelraj/" target="_blank" rel="noopener noreferrer" className="text-black"><Linkedin /></a>
            <a href="https://x.com/realtechCEO" target="_blank" rel="noopener noreferrer" className="text-black"><Twitter /></a>
-           {/* Add Instagram link and icon */}
-           <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="text-black"><Instagram /></a>
+           {/* Update Instagram link */}
+           <a href="https://www.instagram.com/phil.samuelraj/" target="_blank" rel="noopener noreferrer" className="text-black"><Instagram /></a>
         </div>
       </div>
     </nav>
