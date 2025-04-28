@@ -20,7 +20,7 @@
         </div>
         <div className="social-links">
            <a href="https://www.linkedin.com/in/philipclementssamuelraj/" target="_blank" rel="noopener noreferrer" className="text-black"><Linkedin /></a>
-           <a href="#" className="text-black"><Twitter /></a>
+           <a href="https://x.com/realtechCEO" target="_blank" rel="noopener noreferrer" className="text-black"><Twitter /></a>
         </div>
       </div>
     </nav>
