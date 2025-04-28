@@ -30,7 +30,7 @@ const Media = () => {
     },
     {
       title: 'TopFirms: Interview With The Founder & Chief helper of Techjays – Philip Samuelraj',
-      link: null, // No link provided
+      link: 'https://topfirms.co/interview/founder-of-techjays', // Updated link
       // image: topFirmsImage, // Add image reference if available
       alt: 'TopFirms Interview', // Add alt text
     },
