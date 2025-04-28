@@ -51,7 +51,7 @@ const Media = () => {
       label: 'Interview', // New card with Interview label
       image: interviewImage, // Added interview image
       alt: 'Techjays Interview Image', // Added alt text for interview image
-      link: '#', // Added placeholder link for the interview
+      link: 'https://www.youtube.com/watch?v=dlD9yiJs070', // Updated placeholder link for the interview
     },
   ];
 
