@@ -124,15 +124,10 @@ const Contact = () => {
             </Form>
           </div>
 
-          {/* Right Column: Map & Social Links */}
+          {/* Right Column: Moved Connect with me here */}
           <div>
-            {/* Map Placeholder */}
-            <div className="h-64 bg-muted rounded-lg mb-8">
-              {/* Placeholder for map - removed the text */}
-            </div>
-
-            {/* Social media links */}
-            <div>
+            {/* Container for "Connect with me" */}
+            <div className="bg-card p-6 rounded-lg shadow-md border border-border">
               <h3 className="text-xl font-semibold mb-4 text-foreground">Connect with me</h3>
               <div className="flex gap-6">
                 <a
