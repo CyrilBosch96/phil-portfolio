@@ -3,8 +3,9 @@ import React from 'react';
 import Image from 'next/image'; // Import the Image component
 import { Card, CardHeader, CardTitle } from '@/components/ui/card';
 
-// Import the image
+// Import the images
 import digitalDigestImage from '@/app/Digital Digest.png';
+import boldJourneyImage from '@/app/Bold Journey.png'; // Import Bold Journey image
 
 const Media = () => {
   const articles = [
@@ -17,20 +18,20 @@ const Media = () => {
     {
       title: 'Bold Journey: Meet Philip Samuelraj',
       link: 'https://boldjourney.com/meet-philip-samuelraj/',
-      // image: boldJourneyImage, // Add image reference if available
-      // alt: 'Bold Journey Article', // Add alt text
+      image: boldJourneyImage, // Add image reference
+      alt: 'Bold Journey Article', // Add alt text
     },
     {
       title: 'Medium: Empowering People and Innovating Software Services',
       link: 'https://medium.com/strtupboost/philip-samuelrajs-vision-empowering-people-and-innovating-software-services-593cab150352',
       // image: mediumImage, // Add image reference if available
-      // alt: 'Medium Article', // Add alt text
+      alt: 'Medium Article', // Add alt text
     },
     {
       title: 'TopFirms: Interview With The Founder & Chief helper of Techjays – Philip Samuelraj',
       link: null, // No link provided
       // image: topFirmsImage, // Add image reference if available
-      // alt: 'TopFirms Interview', // Add alt text
+      alt: 'TopFirms Interview', // Add alt text
     },
   ];
 
