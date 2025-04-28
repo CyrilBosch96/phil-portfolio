@@ -19,7 +19,7 @@
            <Link href="/contact" className="text-black">Contact</Link>
         </div>
         <div className="social-links">
-           <a href="#" className="text-black"><Linkedin /></a>
+           <a href="https://www.linkedin.com/in/philipclementssamuelraj/" target="_blank" rel="noopener noreferrer" className="text-black"><Linkedin /></a>
            <a href="#" className="text-black"><Twitter /></a>
         </div>
       </div>
