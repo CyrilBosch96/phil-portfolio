@@ -3,14 +3,21 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: 'Poppins', sans-serif;
-}
-
 @layer base {
+  html, body {
+    @apply h-full; /* Ensure html and body take full height */
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    @apply bg-background text-foreground; /* Apply background and text color */
+  }
+
   :root {
     --background: 0 0% 100%; /* Set background to white */
-    --foreground: 29 41 57;
+    --foreground: 0 0% 0%; /* Set foreground text to black */
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
@@ -78,9 +85,7 @@ body {
   * {
     @apply border-border;
   }
-  body {
-    @apply bg-background text-foreground;
-  }
+  /* Removed body specific background/foreground as it's handled in html, body above */
 }
 
 /* Custom color definitions */
@@ -113,8 +118,8 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: hsl(var(--background));
-  color: hsl(var(--foreground));
+  background-color: hsl(var(--background)); /* Ensure navbar background matches page */
+  color: hsl(var(--foreground)); /* Ensure navbar text matches page text color */
   z-index: 10;
   padding: 1rem 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -125,6 +130,14 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
+  max-width: 1200px; /* Optional: constrain navbar width */
+  margin: 0 auto; /* Center the navbar container */
+}
+
+.nav-brand a {
+  color: hsl(var(--foreground)); /* Use foreground color */
+  font-weight: 600; /* Make brand slightly bolder */
+  text-decoration: none;
 }
 
 .nav-links {
@@ -134,12 +147,12 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: hsl(var(--foreground));
+  color: hsl(var(--foreground)); /* Use foreground color */
   transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: hsl(var(--primary));
+  color: hsl(var(--primary)); /* Use primary color for hover */
 }
 
 .social-links {
@@ -148,11 +161,10 @@ body {
 }
 
 .social-links a {
-  color: hsl(var(--foreground));
+  color: hsl(var(--foreground)); /* Use foreground color */
   transition: color 0.3s ease;
 }
 
 .social-links a:hover {
-  color: hsl(var(--primary));
+  color: hsl(var(--primary)); /* Use primary color for hover */
 }
-
