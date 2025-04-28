@@ -30,14 +30,7 @@ const Media = () => {
             </p>
           </div>
         </div>
-        {/* Speaking engagements timeline */}
-        <div className="mt-6">
-          <h3 className="text-xl font-semibold mb-2 dark-charcoal">Speaking Engagements Timeline</h3>
-          <div className="h-48 bg-gray-200 rounded-lg">
-            {/* Add speaking engagements timeline here */}
-            <p className="text-center py-20 dark-charcoal">Speaking Engagements Timeline</p>
-          </div>
-        </div>
+        {/* Speaking engagements timeline removed */}
       </div>
     </section>
   );
