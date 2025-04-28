@@ -7,6 +7,7 @@ import { Card, CardHeader, CardTitle } from '@/components/ui/card';
 import digitalDigestImage from '@/app/Digital Digest.png';
 import boldJourneyImage from '@/app/Bold Journey.png'; // Import Bold Journey image
 import mediumImage from '@/app/Medium.png'; // Import Medium image
+import topFirmImage from '@/app/TopFirm.png'; // Import TopFirm image
 
 const Media = () => {
   const articles = [
@@ -31,7 +32,7 @@ const Media = () => {
     {
       title: 'TopFirms: Interview With The Founder & Chief helper of Techjays – Philip Samuelraj',
       link: 'https://topfirms.co/interview/founder-of-techjays', // Updated link
-      // image: topFirmsImage, // Add image reference if available
+      image: topFirmImage, // Add image reference for TopFirms
       alt: 'TopFirms Interview', // Add alt text
     },
   ];
