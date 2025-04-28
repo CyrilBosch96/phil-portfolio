@@ -6,6 +6,7 @@ import { Card, CardHeader, CardTitle } from '@/components/ui/card';
 // Import the images
 import digitalDigestImage from '@/app/Digital Digest.png';
 import boldJourneyImage from '@/app/Bold Journey.png'; // Import Bold Journey image
+import mediumImage from '@/app/Medium.png'; // Import Medium image
 
 const Media = () => {
   const articles = [
@@ -24,7 +25,7 @@ const Media = () => {
     {
       title: 'Medium: Empowering People and Innovating Software Services',
       link: 'https://medium.com/strtupboost/philip-samuelrajs-vision-empowering-people-and-innovating-software-services-593cab150352',
-      // image: mediumImage, // Add image reference if available
+      image: mediumImage, // Add image reference for Medium
       alt: 'Medium Article', // Add alt text
     },
     {
