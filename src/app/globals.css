@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -118,47 +117,52 @@
   }
 }
 
-/* Navbar styling */
-.navbar {
-  position: sticky;
-  top: 0;
+/* Additional styling for the new navigation system */
+.nav-link {
+  position: relative;
+  color: hsl(var(--foreground));
+  padding: 0.5rem 0;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: hsl(var(--primary));
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
   left: 0;
+  background-color: hsl(var(--primary));
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
   width: 100%;
-  background-color: hsl(var(--background)); /* Ensure navbar background matches page */
-  color: hsl(var(--foreground)); /* Ensure navbar text matches page text color */
-  z-index: 10;
-  padding: 1rem 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1rem;
-  max-width: 1200px; /* Optional: constrain navbar width */
-  margin: 0 auto; /* Center the navbar container */
+.mobile-link {
+  display: block;
+  color: hsl(var(--foreground));
+  font-size: 1.125rem;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid hsl(var(--border));
+  transition: color 0.2s ease;
 }
 
-.nav-brand a {
-  color: hsl(var(--foreground)); /* Use foreground color */
-  font-weight: 600; /* Make brand slightly bolder */
-  text-decoration: none;
+.mobile-link:hover {
+  color: hsl(var(--primary));
 }
 
-.nav-links {
-  display: flex;
-  gap: 2rem;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: hsl(var(--foreground)); /* Use foreground color */
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: hsl(var(--primary)); /* Use primary color for hover */
+/* Disable scrolling when mobile menu is open */
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
 }
 
 .social-links {
@@ -167,18 +171,13 @@
 }
 
 .social-links a {
-  color: hsl(var(--foreground)); /* Use foreground color */
+  color: hsl(var(--foreground));
   transition: color 0.3s ease;
 }
 
 .social-links a:hover {
-  color: hsl(var(--primary)); /* Use primary color for hover */
+  color: hsl(var(--primary));
 }
-
-/* REMOVED: Complex :not rule for scrollbars */
-/* html:not(body > #__next > div:first-child) {
-  overflow-y: auto;
-} */
 
 /* Add scrollbar styles */
 ::-webkit-scrollbar {

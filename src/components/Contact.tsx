@@ -53,86 +53,170 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="py-16 bg-background">
+    <section id="contact" className="py-12 bg-background min-h-screen flex items-center">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-serif font-bold mb-6 text-foreground">Contact</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Left Column: Contact Info & Form */}
-          <div>
-            <p className="mb-4 text-foreground">
+        <h2 className="text-4xl font-serif font-bold mb-8 text-foreground text-center">Get in Touch</h2>
+        
+        {/* Mobile Profile Image - Only visible on mobile */}
+        <div className="md:hidden mb-8">
+          <div className="flex justify-center">
+            <div className="relative w-[300px] h-[300px] rounded-full overflow-hidden border-4 border-primary shadow-xl">
+              <Image 
+                src="/Philphil.jpg" 
+                alt="Philip Clements Samuel Raj" 
+                fill
+                priority
+                style={{ 
+                  objectFit: 'cover',
+                  objectPosition: 'center 30%'
+                }}
+                className="rounded-full"
+              />
+            </div>
+          </div>
+        </div>
+        
+        {/* Mobile Connect Card - Only visible on mobile */}
+        <div className="md:hidden mb-8">
+          <div className="bg-card p-8 rounded-xl shadow-lg border border-border">
+            <h3 className="text-2xl font-serif font-semibold mb-6 text-foreground text-center">Connect with me</h3>
+            <div className="flex justify-center gap-8">
+              <a
+                href="https://www.linkedin.com/in/philipclementssamuelraj/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground hover:text-primary transition-all duration-300 transform hover:scale-110"
+                aria-label="LinkedIn Profile"
+              >
+                <Linkedin size={36} />
+              </a>
+              <a
+                href="https://x.com/realtechCEO"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground hover:text-primary transition-all duration-300 transform hover:scale-110"
+                aria-label="Twitter Profile"
+              >
+                <Twitter size={36} />
+              </a>
+              <a
+                href="https://www.instagram.com/phil.samuelraj/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground hover:text-primary transition-all duration-300 transform hover:scale-110"
+                aria-label="Instagram Profile"
+              >
+                <Instagram size={36} />
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
+          {/* Left Column: Contact Form with enhanced styling */}
+          <div className="bg-card p-8 rounded-xl shadow-lg border border-border h-full flex flex-col">
+            <h3 className="text-2xl font-serif font-semibold mb-6 text-foreground">Send a Message</h3>
+            <p className="mb-6 text-foreground/80 text-lg">
               Feel free to reach out for business inquiries or to connect.
             </p>
 
             {/* Contact Form */}
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                <FormField
-                  control={form.control}
-                  name="name"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-foreground">Name</FormLabel>
-                      <FormControl>
-                        <Input placeholder="Your Name" {...field} className="bg-input border-border text-foreground" />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-foreground">Email</FormLabel>
-                      <FormControl>
-                        <Input type="email" placeholder="your.email@example.com" {...field} className="bg-input border-border text-foreground" />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="phone"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-foreground">Phone (Optional)</FormLabel>
-                      <FormControl>
-                        {/* Consider adding country code selection later if needed */}
-                        <Input type="tel" placeholder="+1 (123) 456-7890" {...field} className="bg-input border-border text-foreground" />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="message"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-foreground">Message</FormLabel>
-                      <FormControl>
-                        <Textarea placeholder="Your message..." {...field} className="bg-input border-border text-foreground" />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <Button type="submit" className="bg-primary text-primary-foreground hover:bg-primary/90">Send Message</Button>
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 flex-grow flex flex-col">
+                <div className="space-y-6 flex-grow">
+                  <FormField
+                    control={form.control}
+                    name="name"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-foreground font-medium">Name</FormLabel>
+                        <FormControl>
+                          <Input 
+                            placeholder="Your Name" 
+                            {...field} 
+                            className="bg-input border-border text-foreground rounded-md py-2 focus:ring-2 focus:ring-primary/50 transition-all" 
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-foreground font-medium">Email</FormLabel>
+                        <FormControl>
+                          <Input 
+                            type="email" 
+                            placeholder="your.email@example.com" 
+                            {...field} 
+                            className="bg-input border-border text-foreground rounded-md py-2 focus:ring-2 focus:ring-primary/50 transition-all" 
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="phone"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-foreground font-medium">Phone (Optional)</FormLabel>
+                        <FormControl>
+                          <Input 
+                            type="tel" 
+                            placeholder="+1 (123) 456-7890" 
+                            {...field} 
+                            className="bg-input border-border text-foreground rounded-md py-2 focus:ring-2 focus:ring-primary/50 transition-all" 
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="message"
+                    render={({ field }) => (
+                      <FormItem className="flex-grow">
+                        <FormLabel className="text-foreground font-medium">Message</FormLabel>
+                        <FormControl>
+                          <Textarea 
+                            placeholder="Your message..." 
+                            {...field} 
+                            className="bg-input border-border text-foreground rounded-md py-2 min-h-[180px] resize-none focus:ring-2 focus:ring-primary/50 transition-all flex-grow" 
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </div>
+                <div className="mt-auto pt-4">
+                  <Button 
+                    type="submit" 
+                    className="bg-primary text-primary-foreground hover:bg-primary/90 w-full py-6 rounded-md text-lg font-semibold transition-all shadow-md hover:shadow-lg"
+                  >
+                    Send Message
+                  </Button>
+                </div>
               </form>
             </Form>
           </div>
 
-          {/* Right Column: Moved Connect with me here */}
-          <div className="flex flex-col gap-6">
-            {/* Phil's Image - Now circular and positioned at the top */}
-            <div className="mt-4 flex justify-center">
-              <div className="relative w-[300px] h-[300px] rounded-full overflow-hidden border-4 border-primary">
+          {/* Right Column: Profile with Image and Connect Card - Only visible on desktop */}
+          <div className="hidden md:flex md:flex-col gap-8 md:sticky md:top-24">
+            {/* Phil's Image - Larger and higher positioned */}
+            <div className="flex justify-center">
+              <div className="relative w-[600px] h-[600px] rounded-full overflow-hidden border-4 border-primary shadow-xl">
                 <Image 
                   src="/Philphil.jpg" 
                   alt="Philip Clements Samuel Raj" 
                   fill
+                  priority
                   style={{ 
                     objectFit: 'cover',
                     objectPosition: 'center 30%'
@@ -142,36 +226,36 @@ const Contact = () => {
               </div>
             </div>
             
-            {/* Container for "Connect with me" - Now below the image */}
-            <div className="bg-card p-6 rounded-lg shadow-md border border-border mt-4">
-              <h3 className="text-xl font-semibold mb-4 text-foreground">Connect with me</h3>
-              <div className="flex gap-6">
+            {/* Enhanced "Connect with me" card */}
+            <div className="bg-card p-8 rounded-xl shadow-lg border border-border">
+              <h3 className="text-2xl font-serif font-semibold mb-6 text-foreground text-center">Connect with me</h3>
+              <div className="flex justify-center gap-8">
                 <a
                   href="https://www.linkedin.com/in/philipclementssamuelraj/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-foreground hover:text-primary transition-colors duration-300"
+                  className="text-foreground hover:text-primary transition-all duration-300 transform hover:scale-110"
                   aria-label="LinkedIn Profile"
                 >
-                  <Linkedin size={24} />
+                  <Linkedin size={36} />
                 </a>
                 <a
                   href="https://x.com/realtechCEO"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-foreground hover:text-primary transition-colors duration-300"
+                  className="text-foreground hover:text-primary transition-all duration-300 transform hover:scale-110"
                   aria-label="Twitter Profile"
                 >
-                  <Twitter size={24} />
+                  <Twitter size={36} />
                 </a>
                 <a
                   href="https://www.instagram.com/phil.samuelraj/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-foreground hover:text-primary transition-colors duration-300"
+                  className="text-foreground hover:text-primary transition-all duration-300 transform hover:scale-110"
                   aria-label="Instagram Profile"
                 >
-                  <Instagram size={24} />
+                  <Instagram size={36} />
                 </a>
               </div>
             </div>

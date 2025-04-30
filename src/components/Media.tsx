@@ -35,6 +35,7 @@ const Media = () => {
       alt: 'Medium Article Cover',
       description: "Philip Samuelraj's Vision: Empowering People and Innovating Software Services",
       label: 'Article',
+      imagePosition: 'center 40%', // Custom position to better show the face
     },
     {
       title: 'TopFirms: Interview With The Founder & Chief helper of Techjays – Philip Samuelraj',
@@ -54,85 +55,12 @@ const Media = () => {
     },
   ];
 
-  // Companies featured in section
-  const companies = [
-    {
-      name: 'Aervivo',
-      image: '/Company1.png',
-      description: 'Powering the Next Generation of Internet Connectivity',
-      link: 'https://aervivo.com'
-    },
-    {
-      name: 'Bracketology',
-      image: '/Company2.png',
-      description: 'Fantasy sports, for reality TV',
-      link: 'https://bracketology.com'
-    },
-    {
-      name: 'Forcefield',
-      image: '/Company3.png',
-      description: 'Keeps you safe with trusted connections',
-      link: 'https://forcefield.com'
-    },
-    {
-      name: 'LifeWink',
-      image: '/Company4.png',
-      description: 'Reinventing life experiences',
-      link: 'https://lifewink.com'
-    }
-  ];
-
   return (
     <section id="media" className="py-16 bg-background">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-serif font-bold mb-12 text-center text-foreground">
           Media Mentions
         </h2>
-
-        {/* Companies Featured In */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-serif font-bold mb-8 text-center text-foreground">
-            Featured In
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {companies.map((company, index) => (
-              <Card key={index} className="overflow-hidden border border-border hover:shadow-md transition-shadow duration-300">
-                <div className="relative w-full h-48 overflow-hidden">
-                  <Image
-                    src={company.image}
-                    alt={`${company.name} logo`}
-                    layout="fill"
-                    objectFit="contain"
-                    className="p-4"
-                  />
-                </div>
-                <CardHeader className="p-4">
-                  <CardTitle className="text-lg font-semibold text-foreground">
-                    {company.name}
-                  </CardTitle>
-                  <CardDescription className="text-sm text-muted-foreground">
-                    {company.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardFooter className="p-4 pt-0">
-                  <a
-                    href={company.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:underline text-sm font-medium"
-                  >
-                    Visit Website
-                  </a>
-                </CardFooter>
-              </Card>
-            ))}
-          </div>
-        </div>
-
-        {/* Articles and Interviews */}
-        <h3 className="text-2xl font-serif font-bold mb-8 text-center text-foreground">
-          Articles & Interviews
-        </h3>
         {/* Changed from grid to flex column layout */}
         <div className="flex flex-col items-center gap-10">
           {articles.map((article, index) => (
@@ -145,6 +73,7 @@ const Media = () => {
                     alt={article.alt || article.title}
                     layout="fill" // Fill the container
                     objectFit="cover" // Crop the image to cover the container
+                    objectPosition={article.imagePosition || 'center'} // Use custom position if provided, or default to center
                     className="transition-transform duration-300 group-hover:scale-105 border border-border" // Added border for stroke
                   />
                 </div>
