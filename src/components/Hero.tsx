@@ -51,13 +51,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-
-      {/* Name title - positioned at top of screen */}
-      <div className="absolute inset-x-0 top-0 z-20 pt-24 sm:pt-32 md:pt-40">
-        <h1 className="text-center text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold px-4 tracking-wide drop-shadow-lg">
-          Philip Clements Samuelraj
-        </h1>
-      </div>
     </section>
   );
 };
