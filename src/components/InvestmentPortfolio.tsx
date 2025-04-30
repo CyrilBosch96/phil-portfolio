@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import pepcarelogo from '@/app/Pepcarelogo.png';
+import hawxlogo from '@/app/Hawxlogo.png';
 
 const InvestmentPortfolio = () => {
   return (
@@ -77,7 +78,7 @@ const InvestmentPortfolio = () => {
           >
             <div className="mb-4 relative h-[200px] w-full">
               <Image 
-                src="/Company4.png" 
+                src={hawxlogo}
                 alt="Hawx Logo" 
                 fill
                 style={{ objectFit: 'contain' }}
