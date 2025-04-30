@@ -1,5 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+import pepcarelogo from '@/app/Pepcarelogo.png';
+import hawxlogo from '@/app/Hawxlogo.png';
 
 const InvestmentPortfolio = () => {
   return (
@@ -10,7 +13,12 @@ const InvestmentPortfolio = () => {
           Our investment philosophy focuses on supporting innovative companies across diverse sectors.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-          <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
+          <a 
+            href="https://www.techjays.com/case-studies/qa-case-study-aervivo" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition-all duration-300 block cursor-pointer hover:-translate-y-1"
+          >
             <div className="mb-4 relative h-[200px] w-full">
               <Image 
                 src="/Company1.png" 
@@ -23,8 +31,13 @@ const InvestmentPortfolio = () => {
             <p className="text-gray-700 dark-charcoal">
               Aervivo's platform enables our partners to rapidly provide fiber-grade connectivity experiences at a fraction of the cost of fiber.
             </p>
-          </div>
-          <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
+          </a>
+          <a 
+            href="https://www.techjays.com/case-studies/bracketology" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition-all duration-300 block cursor-pointer hover:-translate-y-1"
+          >
             <div className="mb-4 relative h-[200px] w-full">
               <Image 
                 src="/Company 2.png" 
@@ -37,35 +50,45 @@ const InvestmentPortfolio = () => {
             <p className="text-gray-700 dark-charcoal">
               Bracketology offers dynamic fantasy gaming for reality television shows in one centralized location.
             </p>
-          </div>
-          <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
+          </a>
+          <a 
+            href="https://www.techjays.com/case-studies/pepcare" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition-all duration-300 block cursor-pointer hover:-translate-y-1"
+          >
             <div className="mb-4 relative h-[200px] w-full">
               <Image 
-                src="/Company3.png" 
-                alt="Forcefield Logo" 
+                src={pepcarelogo}
+                alt="PepCare Logo" 
                 fill
                 style={{ objectFit: 'contain' }}
               />
             </div>
-            <h3 className="text-xl font-semibold mb-2 dark-charcoal">Forcefield</h3>
+            <h3 className="text-xl font-semibold mb-2 dark-charcoal">PepCare</h3>
             <p className="text-gray-700 dark-charcoal">
-              Forcefield keeps you safe. With a single button, check on trusted friends and family, or notify and summon them to help you out.
+              Built a web HIPPA-compliant platform to streamline scheduling, referral, and consultation services for dental practitioners.
             </p>
-          </div>
-          <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
+          </a>
+          <a 
+            href="https://www.techjays.com/case-studies/hawx" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition-all duration-300 block cursor-pointer hover:-translate-y-1"
+          >
             <div className="mb-4 relative h-[200px] w-full">
               <Image 
-                src="/Company4.png" 
-                alt="LifeWink Logo" 
+                src={hawxlogo}
+                alt="Hawx Logo" 
                 fill
                 style={{ objectFit: 'contain' }}
               />
             </div>
-            <h3 className="text-xl font-semibold mb-2 dark-charcoal">LifeWink</h3>
+            <h3 className="text-xl font-semibold mb-2 dark-charcoal">Hawx</h3>
             <p className="text-gray-700 dark-charcoal">
-              An innovative, trusted global communications technology that enables people to connect again with their loved ones after they are gone.
+              Our pros created a fully-integrated and user-friendly platform for pest control booking via desktop, mobile, and tablet.
             </p>
-          </div>
+          </a>
         </div>
       </div>
     </section>

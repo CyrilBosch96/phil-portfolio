@@ -2,6 +2,8 @@ import React from 'react';
 import Image from 'next/image'; // Import the Image component
 import { Card, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'; // Import CardFooter and CardDescription
 import { Badge } from '@/components/ui/badge'; // Import Badge component
+import Link from 'next/link';
+import { ExternalLink } from 'lucide-react';
 
 // Import the images
 import digitalDigestImage from '@/app/Digital Digest.png';
@@ -64,49 +66,48 @@ const Media = () => {
         {/* Changed from grid to flex column layout */}
         <div className="flex flex-col items-center gap-10">
           {articles.map((article, index) => (
-            <Card key={index} className="relative w-full max-w-3xl overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col group border border-border"> {/* Changed max-w-2xl to max-w-3xl */}
-              {/* Image Container */}
-              {article.image && (
-                <div className="relative w-full h-60 overflow-hidden border-b border-border rounded-t-lg"> {/* Added border-b */}
-                  <Image
-                    src={article.image}
-                    alt={article.alt || article.title}
-                    layout="fill" // Fill the container
-                    objectFit="cover" // Crop the image to cover the container
-                    objectPosition={article.imagePosition || 'center'} // Use custom position if provided, or default to center
-                    className="transition-transform duration-300 group-hover:scale-105 border border-border" // Added border for stroke
-                  />
-                </div>
-              )}
-              {/* Content Container */}
-              <CardHeader className="p-6 flex-grow"> {/* Use padding and make it grow */}
-                <CardTitle className="text-xl font-semibold mb-2 text-foreground leading-snug"> {/* Adjusted leading */}
-                   {article.title} {/* Removed the link wrapper */}
-                </CardTitle>
-                 {article.description && (
-                   <CardDescription className="text-muted-foreground">
-                     {article.description}
-                   </CardDescription>
-                 )}
-              </CardHeader>
-              {/* Footer with Read More/Watch Now link */}
-              {article.link && (
-                <CardFooter className="p-6 pt-0 mt-auto"> {/* Added pt-0 and mt-auto */}
-                  <a
-                    href={article.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:underline transition-colors duration-200 font-medium"
-                  >
-                    {article.label === 'Interview' ? 'Watch Now...' : 'Read More...'}
-                  </a>
-                </CardFooter>
-              )}
-              {/* Article/Interview Badge */}
-              <Badge variant="secondary" className="absolute bottom-4 right-4">
-                {article.label}
-              </Badge>
-            </Card>
+            <a 
+              key={index} 
+              href={article.link} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-full max-w-3xl block"
+            >
+              <Card className="relative w-full overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col group border border-border hover:border-primary cursor-pointer h-full">
+                {/* Image Container */}
+                {article.image && (
+                  <div className="relative w-full h-60 overflow-hidden border-b border-border rounded-t-lg">
+                    <Image
+                      src={article.image}
+                      alt={article.alt || article.title}
+                      layout="fill" // Fill the container
+                      objectFit="cover" // Crop the image to cover the container
+                      objectPosition={article.imagePosition || 'center'} // Use custom position if provided, or default to center
+                      className="transition-transform duration-300 group-hover:scale-105 border border-border" // Added border for stroke
+                    />
+                  </div>
+                )}
+                {/* Content Container */}
+                <CardHeader className="p-6 flex-grow">
+                  <div className="flex justify-between items-start">
+                    <CardTitle className="text-xl font-semibold mb-2 text-foreground leading-snug group-hover:text-primary transition-colors duration-200">
+                      {article.title}
+                    </CardTitle>
+                    <ExternalLink size={18} className="text-muted-foreground shrink-0 ml-2 mt-1 group-hover:text-primary transition-colors duration-200" />
+                  </div>
+                  {article.description && (
+                    <CardDescription className="text-muted-foreground">
+                      {article.description}
+                    </CardDescription>
+                  )}
+                </CardHeader>
+                
+                {/* Article/Interview Badge */}
+                <Badge variant="secondary" className="absolute bottom-4 right-4">
+                  {article.label}
+                </Badge>
+              </Card>
+            </a>
           ))}
         </div>
       </div>
