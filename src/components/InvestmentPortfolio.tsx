@@ -37,7 +37,7 @@ const InvestmentPortfolio = () => {
           <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
             <div className="mb-4 relative h-[200px] w-full">
               <Image 
-                src="/Company2.png" 
+                src="/Company 2.png" 
                 alt="Bracketology Logo" 
                 fill
                 style={{ objectFit: 'contain' }}
@@ -61,7 +61,7 @@ const InvestmentPortfolio = () => {
           <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
             <div className="mb-4 relative h-[200px] w-full">
               <Image 
-                src="/PepCare.png" 
+                src="/Company3.png" 
                 alt="PepCare Logo" 
                 fill
                 style={{ objectFit: 'contain' }}
@@ -85,7 +85,7 @@ const InvestmentPortfolio = () => {
           <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
             <div className="mb-4 relative h-[200px] w-full">
               <Image 
-                src="/Hawx.png" 
+                src="/Company4.png" 
                 alt="Hawx Logo" 
                 fill
                 style={{ objectFit: 'contain' }}
