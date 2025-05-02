@@ -6,21 +6,22 @@ import Link from 'next/link';
 import { ExternalLink } from 'lucide-react';
 
 // Import the images
-import digitalDigestImage from '@/app/Digital Digest.png';
+import buildWithAIImage from '@/app/Build with AI.png';
 import boldJourneyImage from '@/app/Bold Journey.png'; // Import Bold Journey image
-import mediumImage from '@/app/Medium.png'; // Import Medium image
+import boldJourney1Image from '@/app/Boldjourney1.png'; // Import Boldjourney1 image
 import topFirmImage from '@/app/TopFirm.png'; // Import TopFirm image
-import interviewImage from '@/app/Interview.jpg'; // Import Interview image
+import innovatingSoftwareImage from '@/app/Innovating software services.png'; // Import Innovating software services image
 
 const Media = () => {
   const articles = [
     {
       title: 'Digital Digest: Boldly Building with AI',
       link: 'https://digitaldigest.com/techjays-ai-future-philip-clements-samuelraj/',
-      image: digitalDigestImage,
+      image: buildWithAIImage,
       alt: 'Digital Digest Article Cover',
       description: 'In Conversation: Philip Clements Samuelraj on Boldly Building with AI',
       label: 'Article',
+      imagePosition: 'center top', // Optimized position to better show the face
     },
     {
       title: 'Bold Journey: Meet Philip Samuelraj',
@@ -29,31 +30,34 @@ const Media = () => {
       alt: 'Bold Journey Article Cover',
       description: 'Meet Philip Samuelraj',
       label: 'Article',
+      imagePosition: 'center 30%', // Optimized position to better show the face
     },
     {
       title: 'Medium: Empowering People and Innovating Software Services',
       link: 'https://medium.com/strtupboost/philip-samuelrajs-vision-empowering-people-and-innovating-software-services-593cab150352',
-      image: mediumImage,
+      image: boldJourney1Image,
       alt: 'Medium Article Cover',
       description: "Philip Samuelraj's Vision: Empowering People and Innovating Software Services",
       label: 'Article',
-      imagePosition: 'center 40%', // Custom position to better show the face
+      imagePosition: 'center 35%', // Optimized position to better show the face
     },
     {
       title: 'TopFirms: Interview With The Founder & Chief helper of Techjays – Philip Samuelraj',
       link: 'https://topfirms.co/interview/founder-of-techjays',
       image: topFirmImage,
       alt: 'TopFirms Interview Cover',
-      description: 'The Topfirms team had the privilege of interviewing Philip Samuelraj, the Founder of Techjays. It was a rewarding experience marked by excellent collaboration and insightful guidance on emerging trends.', // Added description for TopFirms article
+      description: 'The Topfirms team had the privilege of interviewing Philip Samuelraj, the Founder of Techjays. It was a rewarding experience marked by excellent collaboration and insightful guidance on emerging trends.',
       label: 'Article',
+      imagePosition: 'center 25%', // Optimized position to better show the face
     },
     {
       title: 'What Makes Techjays AI Products STAND OUT?',
       description: 'The Future of AI Development: Insights from Philip, Founder of Techjays',
-      label: 'Interview', // New card with Interview label
-      image: interviewImage, // Added interview image
-      alt: 'Techjays Interview Image', // Added alt text for interview image
-      link: 'https://www.youtube.com/watch?v=dlD9yiJs070', // Updated placeholder link for the interview
+      label: 'Interview',
+      image: innovatingSoftwareImage,
+      alt: 'Techjays Interview Image',
+      link: 'https://www.youtube.com/watch?v=dlD9yiJs070',
+      imagePosition: 'center 30%', // Optimized position to better show the face
     },
   ];
 
@@ -76,14 +80,15 @@ const Media = () => {
               <Card className="relative w-full overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col group border border-border hover:border-primary cursor-pointer h-full">
                 {/* Image Container */}
                 {article.image && (
-                  <div className="relative w-full h-60 overflow-hidden border-b border-border rounded-t-lg">
+                  <div className="relative w-full h-80 overflow-hidden border-b border-border rounded-t-lg">
                     <Image
                       src={article.image}
                       alt={article.alt || article.title}
-                      layout="fill" // Fill the container
-                      objectFit="cover" // Crop the image to cover the container
-                      objectPosition={article.imagePosition || 'center'} // Use custom position if provided, or default to center
-                      className="transition-transform duration-300 group-hover:scale-105 border border-border" // Added border for stroke
+                      layout="fill"
+                      objectFit="cover"
+                      objectPosition={article.imagePosition || 'center'}
+                      className="transition-transform duration-300 group-hover:scale-105 border border-border"
+                      priority
                     />
                   </div>
                 )}
