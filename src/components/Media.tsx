@@ -15,6 +15,15 @@ import innovatingSoftwareImage from '@/app/Innovating software services.png'; //
 const Media = () => {
   const articles = [
     {
+      title: 'What Makes Techjays AI Products STAND OUT?',
+      description: 'The Future of AI Development: Insights from Philip, Founder of Techjays',
+      label: 'Interview',
+      image: innovatingSoftwareImage,
+      alt: 'Techjays Interview Image',
+      link: 'https://www.youtube.com/watch?v=dlD9yiJs070',
+      imagePosition: 'center 30%', // Optimized position to better show the face
+    },
+    {
       title: 'Digital Digest: Boldly Building with AI',
       link: 'https://digitaldigest.com/techjays-ai-future-philip-clements-samuelraj/',
       image: buildWithAIImage,
@@ -49,15 +58,6 @@ const Media = () => {
       description: 'The Topfirms team had the privilege of interviewing Philip Samuelraj, the Founder of Techjays. It was a rewarding experience marked by excellent collaboration and insightful guidance on emerging trends.',
       label: 'Article',
       imagePosition: 'center 25%', // Optimized position to better show the face
-    },
-    {
-      title: 'What Makes Techjays AI Products STAND OUT?',
-      description: 'The Future of AI Development: Insights from Philip, Founder of Techjays',
-      label: 'Interview',
-      image: innovatingSoftwareImage,
-      alt: 'Techjays Interview Image',
-      link: 'https://www.youtube.com/watch?v=dlD9yiJs070',
-      imagePosition: 'center 30%', // Optimized position to better show the face
     },
   ];
 
